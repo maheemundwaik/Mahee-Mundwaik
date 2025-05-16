@@ -1,0 +1,187 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Historical Marathi Books Blog</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #800000;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/ShivajiMaharajPainting.jpg/1280px-ShivajiMaharajPainting.jpg');
+      background-size: cover;
+      background-position: center;
+      background-blend-mode: multiply;
+    }
+    nav {
+      background-color: #4d0000;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px;
+    }
+    nav button {
+      background: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      font-weight: bold;
+      color: #4d0000;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+    nav button.active, nav button:hover {
+      background-color: #800000;
+      color: white;
+    }
+    .quote-section {
+      text-align: center;
+      padding: 15px;
+      background-color: #fff0f0;
+      font-style: italic;
+    }
+    section {
+      display: none;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    section.active {
+      display: block;
+    }
+    h2 {
+      color: #800000;
+      margin-bottom: 10px;
+    }
+    .book-cover {
+      max-width: 200px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #4d0000;
+      color: white;
+      margin-top: 30px;
+    }
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+      nav button {
+        width: 100%;
+      }
+      .book-cover {
+        width: 100%;
+        max-width: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Historical Marathi Books</h1>
+    <p>Explore the legendary tales of Chava, Shrimant Yogi, Bahirji Naik, and Shivnetra Bahirji</p>
+  </header>
+
+  <nav>
+    <button onclick="showPage('chava', this)" class="active">Chava</button>
+    <button onclick="showPage('shriman yogi', this)">Shriman Yogi</button>
+    <button onclick="showPage('bahirji', this)">Bahirji Naik</button>
+    <button onclick="showPage('shivnetra', this)">Shivnetra Bahirji</button>
+    <button onclick="showPage('about', this)">About</button>
+    <button onclick="showPage('contact', this)">Contact</button>
+  </nav>
+
+  <div class="quote-section">
+    "Swarajya is my birthright and I shall have it." – Chhatrapati Shivaji Maharaj
+  </div>
+
+  <section id="chava" class="active">
+    <h2>Chava</h2>
+    <img src="chavabook.jpg" alt="Chava Book " class="book-cover" style"width: 200px; border-radius: 10px;" /></img>
+    <p><strong>Author:</strong> Shivaji Sawant</p>
+    <p>"Chava" explores the life of Chhatrapati Sambhaji Maharaj, highlighting his valor, intellect, and poetic brilliance.</p>
+    <p>
+      <a href="https://www.akshardhara.com/index.php?route=product/product&product_id=2168" target="_blank">Buy on Akshardhara</a> |
+      <a href="https://www.amazon.in/dp/B01N5FNGZJ" target="_blank">Buy on Amazon</a>
+    </p>
+    <p><strong>Amit:</strong> “Chava is an emotional rollercoaster. A powerful read!”</p>
+  </section>
+
+  <section id="shriman yogi">
+    <h2>Shrimant Yogi</h2>
+    <img src="shrimanyogi.jpg" alt="Shriman Yogi Book Cover" class="book-cover" />
+    <p><strong>Author:</strong> Ranjit Desai</p>
+    <p>A biography-style novel about Shivaji Maharaj's visionary rule, struggles, and achievements.</p>
+    <p>
+      <a href="https://www.akshardhara.com/index.php?route=product/product&product_id=87" target="_blank">Buy on Akshardhara</a> |
+      <a href="https://www.amazon.in/dp/B01N1U2T4W" target="_blank">Buy on Amazon</a>
+    </p>
+    <p><strong>Neha:</strong> “Shrimant Yogi brings history alive with every chapter.”</p>
+  </section>
+
+  <section id="bahirji">
+    <h2>Bahirji Naik</h2>
+    <img src="bahirji.jpg" alt="Bahirji Naik Book Cover" class="book-cover" />
+    <p><strong>Author:</strong> Y. N. Kelkar</p>
+    <p>This book highlights Bahirji Naik’s legendary spy missions, clever disguises, and loyalty to Shivaji Maharaj.</p>
+    <p>
+      <a href="https://www.akshardhara.com/index.php?route=product/product&product_id=2724" target="_blank">Buy on Akshardhara</a>
+    </p>
+    <p><strong>Ravi:</strong> “Amazing insight into Maratha intelligence and strategy!”</p>
+  </section>
+
+  <section id="shivnetra">
+    <h2>Shivnetra Bahirji</h2>
+    <img src="shivnetrabahirji.jpg" alt="Shivnetra Bahirji Book Cover" class="book-cover" />
+    <p><strong>Author:</strong> Vinayak Kolhe</p>
+    <p>This book reveals Bahirji Naik’s spiritual strategies and sixth sense that helped Shivaji Maharaj stay ahead of enemies.</p>
+    <p>
+      <a href="https://www.akshardhara.com/index.php?route=product/product&product_id=17942" target="_blank">Buy on Akshardhara</a>
+    </p>
+    <p><strong>Swati:</strong> “An inspiring and thrilling take on Bahirji's divine insight.”</p>
+  </section>
+
+  <section id="about">
+    <h2>About This Blog</h2>
+    <p>This blog showcases Marathi historical literature that celebrates the Maratha empire’s valor, strategy, and cultural legacy.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email us at: <a href="mailto:maheemundwaik@gmail.com">maheemundwaik@gmail.com</a></p>
+  </section>
+
+  
+
+  <script>
+    function showPage(pageId, btn) {
+      const sections = document.querySelectorAll('section');
+      const buttons = document.querySelectorAll('nav button');
+      
+      sections.forEach(section => section.classList.remove('active'));
+      buttons.forEach(button => button.classList.remove('active'));
+      
+      const target = document.getElementById(pageId);
+      if (target) target.classList.add('active');
+      if (btn) btn.classList.add('active');
+    }
+  </script>
+</body>
+</html>
